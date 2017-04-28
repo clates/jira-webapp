@@ -1,0 +1,90 @@
+ID,ParentID,Asignee,Hours,Title
+VAR-5933,VAR-5935,thomasn,2,Create Simple Modal to Hold Setting Content
+VAR-5941,VAR-5935,thomasn,2,Create Modal Cancel & Continue to Waiting Room Buttons on Modal
+VAR-5975,VAR-5935,thomasn,4,Proof of Concept for Microphone Use
+VAR-5977,VAR-5935,thomasn,4,Proof of Concept For Camera
+VAR-5978,VAR-5935,thomasn,4,Research Camera/Microphone Libraries/WebRTC
+VAR-5956,VAR-5910,dolkannagarip,6,Investigate the flow
+VAR-5958,VAR-5910,dolkannagarip,4,Document
+VAR-5960,VAR-5910,chena,4,Investigate
+VAR-6131,VAR-5910,chena,1,test redirect after login goes back to details page
+VAR-6133,VAR-5910,chena,1,test redirect after ROA
+VAR-6136,VAR-5910,chena,2,save EULA accepted without jsessionid
+VAR-5945,VAR-5816,latesc,2,Build Standby Section
+VAR-5946,VAR-5816,latesc,4,Build WR-Details Section
+VAR-5947,VAR-5816,latesc,1,Build WR-Container
+VAR-5948,VAR-5816,latesc,4,Unit Test
+VAR-5949,VAR-5816,khafajizadehf,3,QA-Create Manual Test
+VAR-5950,VAR-5816,khafajizadehf,6,QA-Create Automated Test Cases
+VAR-5951,VAR-5816,khafajizadehf,4,QA- iPhone/Safari/VO - 508 manual testing 
+VAR-5952,VAR-5816,latesc,1,Code Review
+VAR-5953,VAR-5816,vohuua,1,QA-Automated Test Code Review
+VAR-5954,VAR-5816,latesc,1,Merge to afs-telehealth
+VAR-5955,VAR-5816,vohuua,2,QA-Automated Test Execution in afs-telehealth
+VAR-5970,VAR-5816,khafajizadehf,4,QA-Windows/IE/NVDA - 508 manual testing 
+VAR-5971,VAR-5816,khafajizadehf,4,QA-Android/Chrome/Talkback - 508 manual testing
+VAR-5973,VAR-5816,vohuua,1,QA- Review Manual Test Script
+VAR-5974,VAR-5816,khafajizadehf,4,QA-Execute Automated Test 
+VAR-6018,VAR-5816,khafajizadehf,3,QA-Create Manual Test
+VAR-5922,VAR-5808,latesc,3,Investigate and Fix the 500 when creating appointments
+VAR-5923,VAR-5808,latesc,2,Determine if appointment creation is causing GET
+VAR-5924,VAR-5808,latesc,3,Append the new appointment to collection
+VAR-5925,VAR-5808,latesc,6,Unit Test
+VAR-5926,VAR-5808,khafajizadehf,1,QA-Manual Test Update
+VAR-5927,VAR-5808,khafajizadehf,3,QA-Write/Edit Automated Test Cases
+VAR-5928,VAR-5808,khafajizadehf,3,QA-iPhone/Safari/VO - 508 manual testing - Farid
+VAR-5929,VAR-5808,latesc,1,Code Review
+VAR-5930,VAR-5808,vohuua,1,QA-Automated Test Case Review
+VAR-5931,VAR-5808,latesc,1,Merge to afs-telehealth
+VAR-5932,VAR-5808,vohuua,1,QA-Automated Test Execution in afs-telehealth
+VAR-5966,VAR-5808,khafajizadehf,3,QA-Windows/IE/NVDA - 508 manual testing - Farid
+VAR-5967,VAR-5808,khafajizadehf,3,QA-Android/Chrome/Talkback - 508 manual testing - 
+VAR-6121,VAR-5808,dolkannagarip,0,fix traditional appointment creation issue
+VAR-6126,VAR-5808,khafajizadehf,1, QA-Automated Test Execution in branch
+VAR-6181,VAR-5808,vohuua,1,Fix environment issue when creating new traditional appointments
+VAR-5598,VAR-5597,barbourp,3,Review current mock services implementation - Pramod
+VAR-5601,VAR-5597,barbourp,4,Provide updated architecture - Pramod
+VAR-5602,VAR-5597,dolkannagarip,6,Implement new architecture
+VAR-5604,VAR-5597,dolkannagarip,3,Generate Test Data
+VAR-5651,VAR-5597,vohuua,3,Test the new mock service
+VAR-5718,VAR-5597,vohuua,2,Create Mock Service test data template
+VAR-5719,VAR-5597,khafajizadehf,0,Review and edit Mock Service test data template
+VAR-5920,VAR-5597,dolkannagarip,3,Implement Cancel appointment
+VAR-6128,VAR-5597,vohuua,0,Clone and deploy new mock service
+VAR-5633,VAR-4824,thomasn,1,Add Start section for Ad Hoc-Mobile Any
+VAR-5634,VAR-4824,thomasn,2,Logic for enabling button
+VAR-5636,VAR-4824,thomasn,2,iOS device logic
+VAR-5637,VAR-4824,thomasn,3,Unit Test
+VAR-5639,VAR-4824,thomasn,1,Code Review
+VAR-5641,VAR-4824,lampartm,2,Create Manual Test Script
+VAR-5643,VAR-4824,vohuua,0,Code review automation 
+VAR-5644,VAR-4824,vohuua,6,Manual Testing - iPhone / VoiceOver
+VAR-5645,VAR-4824,vohuua,6,Manual Testing - Android / TalkBack
+VAR-5646,VAR-4824,khafajizadehf,1,Review Manual Test Script - Farid
+VAR-5647,VAR-4824,vohuua,6,Manual Testing - Windows / NVDA
+VAR-5648,VAR-4824,khafajizadehf,6,QA Create Automation Test Script - Farid
+VAR-5649,VAR-4824,khafajizadehf,2,QA Execute/Debug Automation Test Script - Farid
+VAR-5650,VAR-4824,lampartm,1,Style Guide Review
+VAR-5921,VAR-4824,thomasn,2,Add Start Side Header to Section
+VAR-6017,VAR-4824,vohuua,1,Modify manual test script
+VAR-6027,VAR-4824,khafajizadehf,2,QA Execute/Debug Automation Test Script - Master 
+VAR-5592,VAR-4822,thomasn,2,Update Front End Model to Match Backend
+VAR-5593,VAR-4822,thomasn,4,Display Data from Model in Template
+VAR-5594,VAR-4822,thomasn,1,Add Logic For Which Icon To Display
+VAR-5595,VAR-4822,thomasn,3,Unit Test
+VAR-5596,VAR-4822,thomasn,1,Code Review
+VAR-5599,VAR-4822,lampartm,2,Create Manual Test Script
+VAR-5600,VAR-4822,lampartm,1,Style Guide Review
+VAR-5609,VAR-4822,lampartm,4,Environment Setup
+VAR-5611,VAR-4822,vohuua,6,QA Create Automation test script
+VAR-5612,VAR-4822,vohuua,3,Manual Testing - iPhone / VoiceOver
+VAR-5613,VAR-4822,vohuua,2,QA Execute/ Debug automation test script
+VAR-5614,VAR-4822,khafajizadehf,0,Code review automation - Farid
+VAR-5615,VAR-4822,khafajizadehf,1,Review Manual Test Script - Farid
+VAR-5630,VAR-4822,vohuua,3,Manual Testing - Android / TalkBack
+VAR-5642,VAR-4822,vohuua,2,Manual Testing - Windows / NVDA
+VAR-5715,VAR-4822,thomasn,3,Update environment to New Booked Appt Service 
+VAR-5723,VAR-4822,thomasn,4,Restructure Front End Call of New Booked Appt Call
+VAR-5798,VAR-4822,thomasn,1,update SDD for moment timezone
+VAR-5919,VAR-4822,vohuua,1,Edit manual test scripts 
+VAR-6024,VAR-4822,vohuua,1,Execute automation test on master

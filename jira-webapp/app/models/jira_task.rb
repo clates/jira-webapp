@@ -1,0 +1,2 @@
+class JiraTask < ApplicationRecord
+end

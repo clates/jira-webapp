@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @jira_task.title %>
+</p>
+
+<p>
+  <strong>Hours:</strong>
+  <%= @jira_task.hours %>
+</p>
+
+<p>
+  <strong>Assignee:</strong>
+  <%= @jira_task.assignee %>
+</p>
+
+<p>
+  <strong>Parent:</strong>
+  <%= @jira_task.parent %>
+</p>
+
+<p>
+  <strong>Sprintid:</strong>
+  <%= @jira_task.sprintID %>
+</p>
+
+<%= link_to 'Edit', edit_jira_task_path(@jira_task) %> |
+<%= link_to 'Back', jira_tasks_path %>

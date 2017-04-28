@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Jira Tasks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Hours</th>
+      <th>Assignee</th>
+      <th>Parent</th>
+      <th>Sprintid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jira_tasks.each do |jira_task| %>
+      <tr>
+        <td><%= jira_task.title %></td>
+        <td><%= jira_task.hours %></td>
+        <td><%= jira_task.assignee %></td>
+        <td><%= jira_task.parent %></td>
+        <td><%= jira_task.sprintID %></td>
+        <!-- <td><%= link_to 'Show', jira_task %></td> -->
+        <!-- <td><%= link_to 'Edit', edit_jira_task_path(jira_task) %></td> -->
+        <!-- <td><%= link_to 'Destroy', jira_task, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Jira Task', new_jira_task_path %>

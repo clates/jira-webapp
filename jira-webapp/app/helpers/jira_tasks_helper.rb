@@ -1,0 +1,2 @@
+module JiraTasksHelper
+end

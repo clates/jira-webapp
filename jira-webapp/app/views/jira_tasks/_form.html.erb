@@ -1,0 +1,42 @@
+<%= form_with(model: jira_task, local: true) do |form| %>
+  <% if jira_task.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(jira_task.errors.count, "error") %> prohibited this jira_task from being saved:</h2>
+
+      <ul>
+      <% jira_task.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :jira_task_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hours %>
+    <%= form.number_field :hours, id: :jira_task_hours %>
+  </div>
+
+  <div class="field">
+    <%= form.label :assignee %>
+    <%= form.text_field :assignee, id: :jira_task_assignee %>
+  </div>
+
+  <div class="field">
+    <%= form.label :parent %>
+    <%= form.text_field :parent, id: :jira_task_parent %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sprintID %>
+    <%= form.number_field :sprintID, id: :jira_task_sprintID %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
