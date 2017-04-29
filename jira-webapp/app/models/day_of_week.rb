@@ -1,0 +1,2 @@
+class DayOfWeek < ApplicationRecord
+end

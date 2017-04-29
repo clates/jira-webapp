@@ -1,0 +1,22 @@
+<%= form_with(model: day_of_week, local: true) do |form| %>
+  <% if day_of_week.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(day_of_week.errors.count, "error") %> prohibited this day_of_week from being saved:</h2>
+
+      <ul>
+      <% day_of_week.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :day %>
+    <%= form.text_field :day, id: :day_of_week_day %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

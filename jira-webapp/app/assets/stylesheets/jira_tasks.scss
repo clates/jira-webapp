@@ -1,3 +1,117 @@
 // Place all the styles related to the jira-tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Header and layout stuff
+
+body{
+  font-family:arial,sans-serif;
+  font-size:100%;
+  margin:3em;
+  background:#666;
+  color:#fff;
+}
+.header{
+	text-align:center;
+}
+.header h1{
+	padding-bottom:10px;
+}
+th, td {
+    border-bottom: 1px solid #ddd;
+}
+th.daysHeader{
+    text-align:center;
+}
+.table tr td.storyRow{
+	vertical-align: middle;
+}
+
+//Stickynote look and feel
+table tr td ul li.task{
+  text-decoration:none;
+  color:#000;
+  background:#FFCBA6;
+  display:block;
+  //height:15em;
+  width:14em;
+  padding:1em;
+  /* Firefox */
+  -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+  /* Safari+Chrome */
+  -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  /* Opera */
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+}
+table tr td ul li.task.task-closed{
+  background:#A1FFA5;
+}
+table tr td ul li.task:hover,ul li.task:focus{
+  -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
+  -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+  box-shadow:10px 10px 7px rgba(0,0,0,.7);
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  position:relative;
+  z-index:5;
+}
+table tr td ul .task{
+  margin:1em;
+  float:left;
+  list-style:none;
+}
+table tr td ul .task{
+  margin:1em;
+  float:left;
+  list-style:none;
+}
+#tasks {
+	//display:inline-flex;
+	padding:0px;
+}
+#tasks .taskID, .assignee{
+  font-size:90%;
+  height:10%;
+  width:48%;
+  float:left;
+}
+#tasks .taskID{
+  width:45%;
+}
+#tasks .assignee{
+  width:48%;
+}
+#tasks .dayPicker{
+  width:10%;
+  display: inline-flex;
+  font-size: 10px;
+}
+#tasks .dayPicker button{
+  font-size: 10px;
+  background-color: inherit;
+  border-color: inherit;
+  border-width:0px;
+  color: black;
+}
+#tasks .dayPicker button.dropdown-toggle::after {
+	content:initial;
+}
+#tasks .title{
+  font-weight: bold !important;
+  width:100% !important;
+  text-align:center;
+  float:left;
+  height:75%;
+}
+#tasks .hours, .parentID{
+  font-size:90%;
+  float:right;
+  text-align:right;
+}
+#tasks .hours{
+  width:48%;
+}
+#tasks .parentID{
+  width:45%;
+}

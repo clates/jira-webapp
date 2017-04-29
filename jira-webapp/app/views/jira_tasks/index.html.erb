@@ -1,35 +1,83 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Jira Tasks</h1>
-
-<table>
-  <thead>
+<div class="header">
+  <h1>Sticky Notes Suck</h1>
+  <h2>VAR - Consolidated List Sprint Board</h2>
+</div>
+<br>
+<table class="table table table-bordered table-condensed" width="100%">
+  <thead class="thead-default">
     <tr>
-      <th>Title</th>
-      <th>Hours</th>
-      <th>Assignee</th>
-      <th>Parent</th>
-      <th>Sprintid</th>
-      <th colspan="3"></th>
+      <th></th>
+      <% @day_of_week.each do |day| %>
+        <th class="daysHeader"><%= day.day %></th>
+      <% end %>
     </tr>
   </thead>
-
-  <tbody>
-    <% @jira_tasks.each do |jira_task| %>
-      <tr>
-        <td><%= jira_task.title %></td>
-        <td><%= jira_task.hours %></td>
-        <td><%= jira_task.assignee %></td>
-        <td><%= jira_task.parent %></td>
-        <td><%= jira_task.sprintID %></td>
-        <!-- <td><%= link_to 'Show', jira_task %></td> -->
-        <!-- <td><%= link_to 'Edit', edit_jira_task_path(jira_task) %></td> -->
-        <!-- <td><%= link_to 'Destroy', jira_task, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
-      </tr>
-    <% end %>
-  </tbody>
+  <% @jira_stories.each do |story, child| %>
+    <tr>
+      <td class="storyRow">
+        <span><%= story %><span>
+      </td>
+      <% @day_of_week.each do |day| %>
+       <td>
+         <ul id="tasks">
+            <% child.select{|task|task.day==day.id}.each do |jira_task| %>
+              <% if jira_task.status == "open" %>
+                <li class="task">
+              <% else %>
+                <li class="task task-closed">
+              <% end %>            
+                <div class="upper">
+                  <div class="taskID">
+                    <span><%= jira_task.taskID %></span>
+                  </div>
+                  <div class="dayPicker dropdown">
+                      <button class="btn btn-info btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-asterisk"></span>
+                      </button>
+                      <ul class="dropdown-menu">
+                          <li>
+                            <span>&nbsp;&nbsp;Move To</span>
+                          </li>
+                          <% @day_of_week.each do |day| %>
+                              <%= content_tag(:li, link_to(day.day, updateAssignedDay_path(taskID: jira_task.id, updatedDayID: day.id), :class => "dropdown-item")) %>
+                          <% end %>    
+                          <div class="dropdown-divider"></div>
+                          <% if jira_task.status == "open" then %>
+                          <%= content_tag(:li, link_to("Mark as Closed", closeTask_path(taskID: jira_task.id, status:"closed"), :class => "dropdown-item")) %> 
+                          <% end %>                     
+                          <% if jira_task.status == "closed" then %>
+                          <%= content_tag(:li, link_to("Reopen Closed", closeTask_path(taskID: jira_task.id, status:"open"), :class => "dropdown-item")) %> 
+                          <% end %>                     
+                      </ul>
+                  </div>
+                  <div class="parentID">
+                    <span><%= jira_task.parent %></span>
+                  </div>
+                </div>
+                <div class="title">
+                  <span><%= jira_task.title %></span>
+                </div>
+                <div class="lower">
+                  <div class="assignee">
+                    <span><%= jira_task.assignee %></span>
+                  </div>
+                  <div class="hours">
+                    <span><%= jira_task.hours %></span>
+                  </div>
+                </div>
+              </li>
+            <% end %>
+         </ul>
+        </td>
+      <% end %>
+    </tr>
+  <% end %>
 </table>
 
 <br>
+
+
 
 <%= link_to 'New Jira Task', new_jira_task_path %>

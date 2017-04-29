@@ -5,6 +5,8 @@ class JiraTasksController < ApplicationController
   # GET /jira_tasks.json
   def index
     @jira_tasks = JiraTask.all
+    @jira_stories = @jira_tasks.group_by{|x|x.parent}
+    @day_of_week = DayOfWeek.all
   end
 
   # GET /jira_tasks/1
@@ -58,6 +60,21 @@ class JiraTasksController < ApplicationController
     respond_to do |format|
       format.html { redirect_to jira_tasks_url, notice: 'Jira task was successfully destroyed.' }
       format.json { head :no_content }
+    end
+  end
+
+  def updateAssignedDay
+    respond_to do |format|
+      puts "Updating the assigned day to #{params[:updatedDayID]} for #{params[:taskID]}"
+      JiraTask.update(params[:taskID], day: params[:updatedDayID])
+      format.html { redirect_to action:"index", notice: 'Task was moved.' }
+    end
+  end
+
+  def closeTask
+    respond_to do |format|
+      JiraTask.update(params[:taskID], status: params[:status])
+      format.html { redirect_to action:"index", notice: 'Task was marked as closed.' }
     end
   end
 
