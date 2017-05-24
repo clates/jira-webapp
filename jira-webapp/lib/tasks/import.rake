@@ -11,7 +11,7 @@ namespace :import do
 		end
 	end
 
-	desc "Import JIRA from CSV"
+	desc "Generate the 'days' needed to support the JIRA import."
 	task initDays: :environment do
 		DayOfWeek.delete_all
 		DayOfWeek.create(day:"Thursday")
